@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400i,500,600" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="reset.css" /> -->
+    <!-- <script src="main.js"></script> -->
+
+    <style>
+
+body, html {
+    height: 100%;
+    background-color: rgb(245, 245, 245);   
+}
+*{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.wrapper {
+display: flex;  
+flex-flow: row wrap;
+font-weight: bold;
+text-align: center;
+height: 100%;
+padding: 50px;
+}
+
+h1{ font-size: 32px; }
+
+.wrapper > * {
+  /* padding: 10px; */
+  flex: 1 100%;
+}
+
+.header {
+  /* background: tomato; */
+  display: block;
+  height: 50px;
+}
+
+.footer {
+  /* background: lightgreen; */
+   display: block;
+  height: 50px;
+}
+
+.main {
+  text-align: left;
+  /* background: deepskyblue; */
+  
+}
+/* .main > * {
+  padding: 10px;
+} */
+
+.aside-1 {
+  /* background: gold; */
+}
+
+.aside-2, #secondNav{
+  /* background: hotpink; */
+    font-family: 'EB Garamond', serif;
+    font-weight: 400; 
+    font-style: italic;
+    border-top: .1px solid black;border-bottom: .1px solid black;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400; 
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 50px;
+}
+nav p {
+    display: none;
+}
+img{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#one ul{
+    display: none;
+}
+ul h4{
+    margin-bottom: 5px;
+}
+ul li{
+    margin-bottom: 15px;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: gray;
+}
+ul li a:hover{
+    text-decoration: underline;
+}
+/* .hide{
+        display: none;
+    } */
+#one ul, #two, #three {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 300;
+}
+#two a{
+    text-decoration: none;
+    color: gray;
+}
+#three{
+    position: relative;   
+}
+#three ul{
+    position: relative;
+    left: -20px;
+}
+#two div {
+    /* margin-top: 20px; */
+    margin-bottom: 50px;
+}
+#rotate{
+    padding-bottom: 27px;
+}
+
+
+
+@media all and (min-width: 800px) {
+  /* .aside { flex: 1 auto; } */
+
+  * {
+      text-align: left;
+  }
+
+  .main    { flex: 2 0px; height: 100%; order: 3; display: flex;}
+  .aside-1 { order: 1; flex: 1;} 
+  .aside-2 {
+    order: 2;
+    flex: 0;
+    border: none;
+    border-left: .1px solid black;
+    border-right: .1px solid black;
+    
+    }
+  .footer  { order: 4; }
+  #one{
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+  }
+  #one ul{
+      /* position: absolute;
+      left: -30px; */
+      list-style: none;
+  }
+  #two{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    /* align-content: flex-end; */
+    overflow: scroll;
+    position: relative;
+  }
+  #two div{
+      /* display: flex; */
+      /* align-content: flex-end; */
+  }
+  
+  .flexDivRight{
+      display: flex;
+      flex-direction: column;
+      /* align-content: space-between; */
+
+  }
+  .flexDivRight img{
+      margin-right: 0;
+      margin-left: auto;
+  }
+  .flexDivRight p{
+      text-align: center;
+      width: 80%;
+      margin-right: 0;
+      margin-left: auto;
+      margin-bottom: 0;
+  }
+  .flexDivRight p:first-of-type{
+        font-weight: 600;
+  }
+  
+  /* #p1show img{
+      float: right;
+  } */
+  /* #p1show p{
+      float: right;
+      text-align: right;
+      margin-left: auto;
+  } */
+
+  #three{
+      position: relative;
+       
+  }
+  #two h2{
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+  #two h2{
+      margin: 0;
+  }
+  #three h2{
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+  #three h2{
+      margin: 0;
+  }
+  ul{
+    display: block;
+    margin: 0;
+    }
+    li:first-child h4{
+        margin-top: 0;
+    }
+    .aside {
+        position: relative;
+    }
+    .aside-1 img{
+        width: 65%;
+        position: absolute;
+        top: 0;
+        left: 0;
+       
+    }
+    .aside-1 h1{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        font-family: 'EB Garamond', serif;
+        font-weight: 600; 
+    }
+    .aside-2 p{
+        padding-left: 40px; padding-right: 40px;
+        display: block;
+    }
+    .aside-2 p:first-child{
+        margin-top: 0;
+    }
+    .aside-2 p:hover{
+        text-decoration: underline;
+    }
+    .hide{
+        display: none;
+    }
+    #one ul{
+        display: block;
+    }
+    #two h2, #three h2{
+        font-family: 'EB Garamond', serif;
+        font-weight: 600; 
+    }
+    h1{
+        margin: 0;
+    }
+    #three ul{
+    position: relative;
+    left: 0px;
+    }
+    #rotate{
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 55vh;
+        left: -25px;
+    }
+    #secondNav {
+        display: none;
+    }
+    nav a {
+        display: none;
+    }
+    .linkHide{
+        display: none;
+    }
+}
+
+body {
+  padding: 0; 
+  margin: 0;
+}
+    
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- <header class="header">Header</header> -->
+        
+        <aside class="aside aside-1">
+            <div>
+                <img src="images/Headshot_Small.png" alt="headshot">
+                <div id="name">
+                    <h1>Sean Neppl</h1>
+                    <h3 id="rotate">Full Stack Web Developer</h3>
+                </div>
+            </div>
+        </aside>
+
+        <aside class="aside aside-2">
+            <nav>
+                <p id="projectLink">Projects</p>
+                <p id="contactLink">Contact</p>
+                <a href="#two">Projects</a>
+                <a href="#three">Contact</a>
+            </nav>
+        </aside>
+
+        <article class="main">
+            <div id="one">
+                <!-- <h2>Projects</h2> -->
+                <ul id="projectsList">
+            
+                    <li id="p1" value="1">
+                        <h4>Whiteboard Studio</h4>
+                        <a href="https://whiteboardstudio.herokuapp.com/" target="_blank">Link</a> - <a href="https://github.com/alisonfahy/ProjectTwoWhiteboard"
+                            target="_blank">Github</a>
+                    </li>
+            
+                    <li id="p2" value="2">
+                        <h4>Trivia Game</h4>
+                        <a href="https://seanneppl.github.io/TriviaGame/index.html" target="_blank">Link</a> - <a href="https://github.com/seanneppl/TriviaGame"
+                            target="_blank">Github</a>
+                    </li>
+            
+                    <li id="p3" value="3">
+                        <h4>Color Memory</h4>
+                        <a href="https://seanneppl.github.io/colorMemory/" target="_blank">Link</a> - <a href="https://github.com/seanneppl/colorMemorysrc"
+                            target="_blank">Github</a>
+                    </li>
+            
+                    <li id="p4" value="4">
+                        <h4>GifTastic</h4>
+                        <a href="https://seanneppl.github.io/GifTastic/index.html" target="_blank">Link</a> - <a href="https://github.com/seanneppl/GifTastic"
+                            target="_blank">Github</a>
+                    </li>
+            
+                    <li id="p5" value="5">
+                        <h4>Liri</h4>
+                        <a href="https://github.com/seanneppl/liri-node-app" target="_blank">Github</a>
+                    </li>
+            
+                    <li id="p6" value="6">
+                        <h4>MongoScraper</h4>
+                        <a href="https://mongoscrapersn.herokuapp.com/" target="_blank">Link</a> - <a href="https://github.com/seanneppl/MongoScraper"
+                            target="_blank">Github</a>
+                    </li>
+                    <li id="p7" value="7">
+                        <h4>The Article Daily</h4>
+                        <a href="https://the-article-daily.herokuapp.com/" target="_blank">Link</a> - <a href="https://github.com/KevMonahan/Project3"
+                            target="_blank">Github</a>
+                    </li>
+            
+                </ul>
+            </div>
+            
+            <div id="two">
+                
+                    <h2>Projects</h2>
+                    <div id="p1show" class="hide flexDivRight">
+                        <img src="images/whiteboard.png" alt="color">
+                        <p>Whiteboard Studio:</p>
+                        <p>A realtime drawing chatroom using p5, express, sockets, and Sequelize</p>
+                        <div class="linkHide"><a href="https://whiteboardstudio.herokuapp.com/" target="_blank">Link</a> - <a href="https://github.com/alisonfahy/ProjectTwoWhiteboard"
+                            target="_blank">Github</a></div>
+                    </div>
+                    <div id="p2show" class="hide flexDivRight">
+                        <img src="images/trivia.png" alt="color">
+                        <p>Trivia Game:</p>
+                        <p>A musical trivia game using express and Jquery</p>
+                        <div class="linkHide"><a href="https://seanneppl.github.io/TriviaGame/index.html" target="_blank">Link</a> - <a href="https://github.com/seanneppl/TriviaGame"
+                            target="_blank">Github</a></div>
+            
+                    </div>
+                    <div id="p3show" class="hide flexDivRight">
+                        <img src="images/colormemory.png" alt="color">
+                        <p>Color Memory:</p>
+                        <p>A color memory game using ReactJs</p>
+                        <div class="linkHide"><a href="https://seanneppl.github.io/colorMemory/" target="_blank">Link</a> - <a href="https://github.com/seanneppl/colorMemorysrc"
+                            target="_blank">Github</a></div>
+                    </div>
+                    <div id="p4show" class="hide flexDivRight">
+                        <img src="images/giftastic.png" alt="color">
+                        <p>GifTastic:</p>
+                        <p>A gif image gallery using express and the giphy api</p>
+                        <div class="linkHide"><a href="https://seanneppl.github.io/GifTastic/index.html" target="_blank">Link</a> - <a href="https://github.com/seanneppl/GifTastic"
+                            target="_blank">Github</a></div>
+                    </div>
+                    <div id="p5show" class="hide flexDivRight">
+                        <img src="images/liri.png" alt="color">
+                        <p>Liri:</p>
+                        <p>A node application using the spotify, twitter, and omdb api's</p>
+                        <div class="linkHide"><a href="https://github.com/seanneppl/liri-node-app" target="_blank">Github</a></div>
+
+                    </div>
+                    <div id="p6show" class="hide flexDivRight">
+                        <img src="images/mongoscrape.png" alt="color">
+                        <p>MongoScraper:</p>
+                        <p>A webscraper using axios, cheerio, mongoose, and express</p>
+                        <div class="linkHide"><a href="https://mongoscrapersn.herokuapp.com/" target="_blank">Link</a> - <a href="https://github.com/seanneppl/MongoScraper"
+                            target="_blank">Github</a></div>
+                    </div> 
+                    <div id="p7show" class="hide flexDivRight">
+                        <img src="images/thearticle.png" alt="color">
+                        <p>The Article Daily:</p>
+                        <p>A React blog that hosts a single article each day and funnels users into one on one discussions.</p>
+                        <div class="linkHide"><a href="https://the-article-daily.herokuapp.com/" target="_blank">Link</a> - <a href="https://github.com/KevMonahan/Project3"
+                            target="_blank">Github</a></div>
+                    </div>
+            
+            </div>
+
+            <aside id="secondNav">
+                <nav>
+                    <a href="#two">Projects</a>
+                    <a href="#three">Contact</a>
+                </nav>
+            </aside>
+
+            <div id="three" class="hide">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        <h4>Email:</h4>
+                        <a href="mailto:Sean.e.neppl@gmail.com">Sean.e.neppl@gmail.com</a>
+                    </li>
+                    <li>
+                        <h4>Phone:</h4>
+                        <p>651-955-6776</p>
+                    </li>
+                    <li>
+                        <h4>LinkedIn:</h4>
+                        <a href="https://www.linkedin.com/in/sean-neppl/" target="_blank">www.linkedin.com/in/sean-neppl/</a>
+                    </li>
+                    <li>
+                        <h4>Github:</h4>
+                        <a href="https://github.com/seanneppl" target="_blank">github.com/seanneppl</a>
+                    </li>
+
+                    <li>
+                        <h4>Resume:</h4>
+                        <a href="https://drive.google.com/file/d/1zZndHZcdKmKdGB5GzxH_LBn2zQk5z8OC/view?usp=sharing" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </div>
+
+        </article>
+        
+        <!-- <footer class="footer">Footer</footer> -->
+    </div>
+
+    <script>
+
+        $("ul li").hover(function () {
+            let showProject = "#p" + $(this).val() + "show";
+            $(showProject).toggleClass("hide");
+        });
+        $("#projectLink").on("click", function () {
+            $("#three").addClass("hide");
+            $("#two").removeClass("hide");
+            $("#one").removeClass("hide");
+            $("#two").css("flex", "2");
+            $("#three").css("flex", "none");
+        });
+        $("#contactLink").on("click", function () {
+            $("#three").removeClass("hide");
+            $("#two").addClass("hide");
+            $("#one").addClass("hide");
+            $("#two").css("flex", "none");
+            $("#three").css("flex", "3");
+        });
+
+
+    </script>
+
+</body>
+</html>
