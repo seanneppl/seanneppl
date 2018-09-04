@@ -1,0 +1,106 @@
+
+body, html {
+        width: 100%;
+        height: 100%;
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 18px;
+        color: white;
+    }
+    #contain{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 50px;
+    }
+    #timeblock{
+        box-sizing: border-box;
+        float: right;
+        width: 50%;
+        padding-right: 50px;
+        display: block;
+        position:relative;
+        text-align:right;
+        right: 0;
+        top: 0;
+    }
+    #time{
+        font-size: 54px;
+    }
+    #header{
+        box-sizing: border-box;
+        width: 50%;
+        font-size:54px;
+        float: left;
+        display: block;
+    }
+    #header h1{
+        width: 50px;
+        line-height: .9;
+    }
+    #answerBlock p, #questionBlock p{
+        margin: 15px 0 15px 0;
+    }
+
+    #bg {
+    background-image: url(../images/3.gif);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#questionBlock{
+    clear: both;
+    position: relative;
+    top: 50px;
+}
+#answerBlock{
+    clear: both;
+    position: relative;
+    top: 60px;
+    /* margin-top: 200px; */
+}
+#answerBlock div, #questionBlock div{
+    margin: 15px 0 15px 0;
+}
+
+#answerBlock h2{
+    font-size: 24px;
+    margin-bottom: 30px;
+    color:#FFD90F;
+}
+ #questionBlock h2{
+    font-size: 24px;
+    margin-bottom: 30px;
+    color:#FFD90F;
+}
+#overBlock{
+
+    position: fixed;
+    top: 50px;
+    right: 50px;
+   margin: 15px 0 15px 0;
+   text-align: center;
+}
+#overBlock p{
+    margin: 10px 0 10px 0;
+}
+#start{
+    padding-top: 25px;
+    margin-left: 50px;
+    width: 20px;
+    clear: both;
+}
+
+#start:hover {
+    cursor: pointer;
+}
+#startOver{
+    color: #FFD90F; 
+     padding-top: 25px;
+}
+
+#startOver:hover{
+    cursor: pointer;
+}
+.answers:hover, #start:hover{
+    color: #FFD90F;
+}

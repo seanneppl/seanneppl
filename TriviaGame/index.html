@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+
+    <div id="bg">
+        <div id="contain">
+            <div id="header"><h1>Trivia Game</h1></div>
+
+            <h3 id="timeblock"><span id="time"></span></h3>
+
+            <div id="start">Start</div> 
+       
+
+            <div id="questionBlock">
+                <h2 id="question">Question</h2>
+                <div id="q0" class="answers">Q1</div>
+                <div id="q1" class="answers">Q2</div>
+                <div id="q2" class="answers">Q3</div>
+                <div id="q3" class="answers">Q4</div>
+            </div>
+
+            <div id="answerBlock">
+                <h2 id="rw">Right/Wrong</h2>
+                <p>The correct answer was:</p>
+                    <p id="theAnswer"></p>
+            
+                <img src="" alt="">
+            </div>
+
+            <div id="overBlock">
+                <h2>The quiz is over</h2>
+                <p>Correct Answers:
+                    <span id="correct"></span>
+                </p>
+                <p>Incorrect Answers:
+                    <span id="incorrect"></span>
+                </p>
+                <p>Unanswered:
+                    <span id="unanswered"></span>
+                </p>
+            <div id="startOver">Start Over?</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <audio autoplay loop preload="auto" src="" type="audio/mpeg" id="sound"></audio>
+
+</body>
+</html>
