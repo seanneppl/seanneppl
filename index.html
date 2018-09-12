@@ -20,6 +20,7 @@ body, html {
 *{
     box-sizing: border-box;
     text-align: center;
+    overflow: visible;
 }
 
 .wrapper {
@@ -52,6 +53,7 @@ h1{ font-size: 32px; }
 
 .main {
   text-align: left;
+  margin-bottom: 150px;
   /* background: deepskyblue; */
   
 }
@@ -98,6 +100,7 @@ img{
 }
 ul h4{
     margin-bottom: 5px;
+    font-weight: 500;
 }
 ul li{
     margin-bottom: 15px;
@@ -123,14 +126,14 @@ font-weight: 300;
 }
 #three{
     position: relative; 
-    margin-top: 50px;  
+    padding-top: 30px;  
 }
 #three ul{
     position: relative;
     left: -20px;
 }
 #two{
-    margin-top: 50px;
+    padding-top: 30px;
 }
 #two div {
     /* margin-top: 20px; */
@@ -149,7 +152,7 @@ font-weight: 300;
       text-align: left;
   }
 
-  .main    { flex: 2 0px; height: 100%; order: 3; display: flex;}
+  .main    { flex: 2 0px; height: 100%; order: 3; display: flex; margin-bottom: 0;}
   .aside-1 { order: 1; flex: 1;} 
   .aside-2 {
     order: 2;
@@ -217,11 +220,12 @@ font-weight: 300;
   #three{
       position: relative;
       margin-top: 0;
+      padding-top: 0;
        
   }
   #two h2{
       position: absolute;
-      top: 0;
+      top: -6px;
       right: 0;
   }
   #two h2{
@@ -229,10 +233,13 @@ font-weight: 300;
   }
   #three h2{
       position: absolute;
-      top: 0;
+      top: -6px;
       right: 0;
   }
   #three h2{
+      margin: 0;
+  }
+  #three p{
       margin: 0;
   }
   ul{
@@ -254,11 +261,18 @@ font-weight: 300;
     }
     .aside-1 h1{
         position: absolute;
-        bottom: 0px;
+        bottom: -10px;
         left: 0;
         font-family: 'EB Garamond', serif;
         font-weight: 600; 
     }
+    /* .aside-1 h1{
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        font-family: 'EB Garamond', serif;
+        font-weight: 600; 
+    } */
     .aside-2 p{
         padding-left: 40px; padding-right: 40px;
         display: block;
@@ -285,12 +299,21 @@ font-weight: 300;
     #three ul{
     position: relative;
     left: 0px;
+    width: calc(100% - 100px);
     }
-    #rotate{
-        transform: rotate(-45deg);
+    /* #rotate{
+        transform: rotate(90deg);
         position: absolute;
-        top: 55vh;
-        left: -17px;
+        bottom: -23px;
+        padding: 0px;
+    } */
+    #rotate{
+        transform: rotate(90deg);
+        position: absolute;
+        right: -90px;
+        top: 75px;
+        padding: 0px;
+        white-space: nowrap;
     }
     #secondNav {
         display: none;
@@ -322,17 +345,20 @@ body {
 
                 <div id="name">
                     <h1>Sean Neppl</h1>
-                    <h3 id="rotate">Full Stack Web Developer</h3>
+
                 </div>
+                <h3 id="rotate">Full Stack Web Developer</h3>
+
+
             </div>
         </aside>
 
         <aside class="aside aside-2">
             <nav>
                 <p id="projectLink">Projects</p>
-                <p id="contactLink">Contact</p>
+                <p id="contactLink">About</p>
                 <a href="#two">Projects</a>
-                <a href="#three">Contact</a>
+                <a href="#three">About</a>
             </nav>
         </aside>
 
@@ -443,13 +469,22 @@ body {
             <aside id="secondNav">
                 <nav>
                     <a href="#two">Projects</a>
-                    <a href="#three">Contact</a>
+                    <a href="#three">About</a>
                 </nav>
             </aside>
 
             <div id="three" class="hide">
-                <h2>Contact</h2>
+                <h2>About</h2>
                 <ul>
+
+                    <li>
+                        <h4>Me:</h4>
+                        <p>I am a new web developer looking to start my career. I am a recent graduate of the University of Minnesota Full-Stack Coding Bootcamp where I learned the fundamentals of full-stack developement and computer science. I enjoy all aspects of full-stack development and trying to present the web in new and interesting ways.</p>
+                    </li>
+                    <li>
+                        <h4>Skills:</h4>
+                       <p>Javascript | Node.JS | HTML/CSS | Mongo/MySQL | Layout/Design</p>
+                    </li>
                     <li>
                         <h4>Email:</h4>
                         <a href="mailto:Sean.e.neppl@gmail.com">Sean.e.neppl@gmail.com</a>
@@ -469,10 +504,13 @@ body {
 
                     <li>
                         <h4>Resume:</h4>
-                        <a href="https://drive.google.com/file/d/1zZndHZcdKmKdGB5GzxH_LBn2zQk5z8OC/view?usp=sharing" target="_blank">Resume</a>
+                        <a href="https://drive.google.com/open?id=1zZndHZcdKmKdGB5GzxH_LBn2zQk5z8OC" target="_blank">Resume</a>
                     </li>
                 </ul>
             </div>
+
+            <!-- Add new tab? or add skills to contact? Make contact the about? -->
+
 
         </article>
         
