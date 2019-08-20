@@ -1,0 +1,396 @@
+$firstColor: rgb(112, 186, 284);
+$secondColor:rgb(235, 166, 114);
+$thirdColor: rgb(208, 80, 8);
+$bgColor: rgb(112, 186, 284);
+// $bgColor:rgb(120, 166, 200);
+$fourthColor :white;
+
+
+#fullWidth {
+   display: block;
+   width: 100vw;
+   height: 100vh;
+   background-color: $bgColor;
+   position: absolute;
+   z-index: -3;
+}
+
+body,
+html {
+
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   width: 100vw;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+canvas {
+   margin: auto;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.contain {
+   display: flex;
+   height: 80%;
+   width: 50%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.links {
+   display: flex;
+}
+
+
+.tabcontent img {
+   width: 100%;
+}
+
+#logo p {
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   font-size: 40px;
+   font-weight: bold;
+   font-style: italic;
+   padding: 0;
+   padding-bottom: 10px;
+   margin: 0;
+
+   -webkit-text-fill-color: white;
+   /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
+
+.box {
+   // position: absolute;
+   position: relative;
+   box-sizing: border-box;
+   display: block;
+   background-color: white;
+   height: 429px;
+   width: 300px;
+   z-index: 5;
+   border: 5px solid white;
+   box-shadow: 0px 30px 15px 5px rgba(0, 0, 0, 0.37);
+   overflow: hidden;
+}
+
+.content {
+   height: 100%;
+   // height: calc(100% - 26px);
+   // margin-top: -26px;
+   width: 100%;
+   overflow: hidden;
+}
+
+.tabLinks {
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.tablink {
+   flex-grow: 1;
+   background-color: #555;
+   color: white;
+   border: none;
+   outline: none;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.tablink:hover {
+   background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+   display: none;
+   // position: absolute;
+   // color: white;
+   // display: none;
+   // padding: 50px;
+   text-align: center;
+   height: 100%;
+}
+
+.tabcontent.active {
+   display: block;
+}
+
+#mobilePlayer {
+   display: none;
+}
+
+#player {
+   width: 102%;
+   height: 102%;
+   margin-left: -1%;
+   margin-top: -3%;
+   overflow: none;
+}
+
+.socialLinks {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 24%;
+
+   a {
+      flex: 1;
+      width: 100%;
+      background-color: $firstColor;
+      color: white;
+      text-decoration: none;
+      padding-top: 7px;
+
+      &:hover {
+         background-color: white;
+         color: $firstColor;
+      }
+   }
+
+}
+
+.first {
+   background-color: $firstColor;
+}
+
+.second {
+   background-color: $secondColor;
+}
+
+.third {
+   background-color: $thirdColor;
+   color: white;
+
+   p {
+      font-size: 30px;
+   }
+}
+
+.fourth {
+   background-color: $fourthColor;
+   color: black;
+}
+
+.tabcontent.second.active {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+
+   p {
+      font-size: 100px;
+      margin: 0;
+      padding: 0;
+   }
+
+   ul {
+      display: none;
+   }
+}
+
+.tabcontent.third.active {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+}
+
+// TICKER START TICKER START TICKER START TICKER START TICKER START TICKER START
+
+
+$duration: 5s;
+
+@keyframes ticker {
+   0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+
+   100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+   }
+}
+
+.ticker-wrap {
+
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   overflow: hidden;
+   height: 4rem;
+   background-color: rgba(#000, 0.7);
+   padding-left: 100%;
+   box-sizing: content-box;
+   z-index: 3;
+
+   .ticker {
+
+      display: inline-block;
+      height: 4rem;
+      line-height: 4rem;
+      white-space: nowrap;
+      padding-right: 100%;
+      box-sizing: content-box;
+
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-name: ticker;
+      animation-name: ticker;
+      -webkit-animation-duration: $duration;
+      animation-duration: $duration;
+
+      &__item {
+
+         display: inline-block;
+
+         padding: 0 2rem;
+         font-size: 2rem;
+         color: white;
+
+         font-family: Helvetica, Arial, sans-serif;
+         font-weight: 100;
+      }
+
+   }
+
+}
+
+@media only screen and (max-width: 812px) {
+   .contain {
+      width: 100%;
+   }
+}
+
+@media only screen and (max-width: 340px) {
+   .contain {
+      width: 100%;
+      height: calc(100% -44px);
+      padding-top: 20px;
+   }
+
+   #logo {
+      // display: none;
+      padding-top: 40px;
+   }
+
+   .ticker-wrap {
+      display: none;
+   }
+
+   .tabcontent.second.active {
+      ul {
+         display: block;
+      }
+   }
+
+}
+
+
+@media screen and (max-height: 440px) and (orientation: landscape) {
+
+   .contain {
+      display: block;
+   }
+
+   #logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      height: 100vh;
+   }
+
+   .box {
+      width: 100vw;
+      height: 100%;
+   }
+
+   .links {
+      display: none;
+   }
+
+   .tabcontent {
+      display: block;
+      height: 100vh;
+      width: 100vw;
+   }
+
+   .ticker-wrap {
+      display: none;
+   }
+
+   #player {
+      display: none;
+   }
+
+   #mobilePlayer {
+
+      display: block;
+      height: 120px;
+
+      width: 102%;
+      margin-left: -1%;
+      margin-top: -5px;
+      overflow: none;
+      background-color: gray;
+   }
+
+   .tabcontent.first {
+      height: auto;
+      border-bottom: 4px solid white;
+   }
+
+   .tabcontent.second {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+
+      p {
+         font-size: 50px;
+         margin: 0;
+         padding: 0;
+      }
+
+      ul {
+         display: block;
+      }
+   }
+
+   .tabcontent.third {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+   }
+
+   .tabcontent.fourth {
+      height: auto;
+
+      .socialLinks {
+         flex-direction: row;
+
+         a {
+            padding: 15px 0 15px 0;
+         }
+      }
+   }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>Products</title>
+
+   <link rel="stylesheet" type="text/css" href="style/normalize.css">
+   <link rel="stylesheet" type="text/css" href="style/style.css">
+
+   <script src="libraries/p5.min.js"></script>
+   <script src="libraries/p5.dom.min.js"></script>
+   <script src="libraries/matter.min.js"></script>
+
+   <script src="js/sketch.js"></script>
+   <script src="js/bird.js"></script>
+   <script src="js/box.js"></script>
+   <script src="js/wall.js"></script>
+
+</head>
+
+<body>
+
+   <div id="fullWidth"></div>
+
+   <main class="contain">
+      <div class="stuff">
+
+         <div id="logo">
+            <p>"Products"</p>
+         </div>
+
+         <div class="box">
+
+            <nav class="links">
+               <button class="tablink first active">Music</button>
+               <button class="tablink second">Shows</button>
+               <button class="tablink third">News</button>
+               <button class="tablink fourth">Contact</button>
+            </nav>
+
+            <div class="content">
+
+               <section class="tabcontent first active">
+                  <iframe id="player"
+                     src="https://bandcamp.com/EmbeddedPlayer/album=3748253806/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+                     seamless>
+                     <a href="http://productsband.bandcamp.com/album/on-the-dotted-line-2">
+                        On The Dotted Line by Products</a>
+                  </iframe>
+
+                  <iframe id="mobilePlayer"
+                     src="https://bandcamp.com/EmbeddedPlayer/album=3748253806/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+                     seamless><a href="http://productsband.bandcamp.com/album/on-the-dotted-line-2">On The Dotted Line
+                        by
+                        Products</a>
+                  </iframe>
+               </section>
+
+               <section class="tabcontent second">
+                  <p>👇</p>
+                  <ul class="showList">
+                     <li>
+                        No upcoming shows
+                     </li>
+                  </ul>
+               </section>
+
+               <section class="tabcontent third">
+                  <!-- <a href="https://www.youtube.com/watch?v=YKl1UE_o8ts">"Everest" Music video</a></p> -->
+                  <p>¯\_(ツ)_/¯</p>
+               </section>
+
+               <section class="tabcontent fourth">
+                  <img src="images/theBand.jpg" alt="Photo of the band Products">
+                  <div class="socialLinks">
+                     <a href="https://www.facebook.com/thebandproducts/">Facebook</a>
+                     <a href="https://productsband.bandcamp.com/releases">Bandcamp</a>
+                     <a href="mailto:thebandproducts@gmail.com">Email</a>
+                  </div>
+               </section>
+
+            </div>
+         </div>
+
+
+
+      </div>
+   </main>
+
+   <footer class="ticker-wrap">
+      <div id="ticker" class="">
+         <div class="ticker__item">No upcoming shows.</div>
+      </div>
+   </footer>
+
+   <script src="js/index.js"></script>
+</body>
+
+</html>
