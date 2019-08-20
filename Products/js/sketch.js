@@ -15,9 +15,14 @@ let speed = 40;
 let prayerImg;
 let flagImg;
 
+// function preload() {
+//    prayerImg = loadImage("../images/Untitled.png");
+//    flagImg = loadImage('../images/flag.png');
+// }
+
 function preload() {
-   prayerImg = loadImage("../images/Untitled.png");
-   flagImg = loadImage('../images/flag.png');
+   prayerImg = loadImage("../products/images/Untitled.png");
+   flagImg = loadImage('../products/images/flag.png');
 }
 
 function setup() {
