@@ -16,7 +16,7 @@ let prayerImg;
 let flagImg;
 
 function preload() {
-   prayerImg = loadImage("../images/untitled.png");
+   prayerImg = loadImage("../images/Untitled.png");
    flagImg = loadImage('../images/flag.png');
 }
 
