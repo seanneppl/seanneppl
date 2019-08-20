@@ -1,9 +1,9 @@
 #fullWidth {
+  position: absolute;
   display: block;
   width: 100vw;
   height: 100vh;
   background-color: #70baff;
-  position: absolute;
   z-index: -3;
 }
 
@@ -324,6 +324,7 @@ canvas {
 
 @media screen and (max-height: 440px) and (orientation: landscape) {
   .contain {
+    position: absolute;
     display: block;
     height: 100%;
     width: 100%;
