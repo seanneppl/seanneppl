@@ -311,6 +311,11 @@ $duration: 5s;
 
    .contain {
       display: block;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
    }
 
    #logo {
