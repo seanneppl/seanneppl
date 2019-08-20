@@ -21,8 +21,8 @@ let flagImg;
 // }
 
 function preload() {
-   prayerImg = loadImage("../products/images/Untitled.png");
-   flagImg = loadImage('../products/images/flag.png');
+   prayerImg = loadImage("images/Untitled.png");
+   flagImg = loadImage('images/flag.png');
 }
 
 function setup() {
