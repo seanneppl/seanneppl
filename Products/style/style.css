@@ -317,9 +317,7 @@ canvas {
     display: none;
   }
   .tabcontent.second.active ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 
@@ -400,6 +398,9 @@ canvas {
     padding: 0;
   }
   .tabcontent.second ul {
+    display: block;
+  }
+  .tabcontent.second.active ul {
     display: block;
   }
   .tabcontent.third {
